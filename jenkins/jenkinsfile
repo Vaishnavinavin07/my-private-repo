@@ -5,37 +5,37 @@ pipeline{
             step{
                 sh'''
                 cat /etc/os-relese
-                ''''
+                '''
             }
                
         }
         stage('build'){
             steps{
                 sh'''
-                echo"memory detais: " free -m
+                echo"memory details: " free -m
                 '''
             }
         }
-        stage('biild-cpu-details)'{
+        stage('build-cpu-details)'{
             steps{
                 sh'''
-                echo"cpu detais: " 
+                echo"cpu details: " 
                 lscpu
-                ''''
+                '''
             }
         }
-        stage('biild-ip){
+        stage('build-ip){
             steps{
                 sh'''
-                echo"ip detais: " 
+                echo"ip details: " 
                 hostname -I
-                ''''
+                '''
             }
         }
-        stage('biild-cal){
+        stage('build-cal){
             steps{
                 sh'''
-                echo"cal detais: " 
+                echo"cal details: " 
                 cal
                 '''
             }
