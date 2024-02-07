@@ -1,0 +1,45 @@
+pipeline{
+    agent any
+    stages{
+        stage('Build'){
+            step{
+                sh'''
+                cat /etc/os-relese
+                ''''
+            }
+               
+        }
+        stage('build'){
+            steps{
+                sh'''
+                echo"memory detais: " free -m
+                '''
+            }
+        }
+        stage('biild-cpu-details)'{
+            steps{
+                sh'''
+                echo"cpu detais: " 
+                lscpu
+                ''''
+            }
+        }
+        stage('biild-ip){
+            steps{
+                sh'''
+                echo"ip detais: " 
+                hostname -I
+                ''''
+            }
+        }
+        stage('biild-cal){
+            steps{
+                sh'''
+                echo"cal detais: " 
+                cal
+                '''
+            }
+        }
+    }
+    
+}
