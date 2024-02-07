@@ -18,8 +18,7 @@ pipeline{
         }
         stage('cpu-details'){
             steps{
-                sh'''
-                echo"cpu details: " 
+                sh''' 
                 lscpu
                 '''
             }
@@ -27,7 +26,6 @@ pipeline{
         stage('hostname'){
             steps{
                 sh'''
-                echo"ip details: " 
                 hostname -I
                 '''
             }
@@ -35,7 +33,6 @@ pipeline{
         stage('cal'){
             steps{
                 sh'''
-                echo"cal details: " 
                 cal
                 '''
             }
