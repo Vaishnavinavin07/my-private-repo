@@ -16,7 +16,7 @@ pipeline{
                 '''
             }
         }
-        stage('build-cpu-details)'{
+        stage('build-cpu-details'){
             steps{
                 sh'''
                 echo"cpu details: " 
