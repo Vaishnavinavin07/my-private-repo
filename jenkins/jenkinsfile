@@ -2,21 +2,21 @@ pipeline{
     agent any
     stages{
         stage('Build'){
-            step{
+            steps{
                 sh'''
                 cat /etc/os-release
                 '''
             }
                
         }
-        stage('build'){
+        stage('memory details){
             steps{
                 sh'''
                 echo"memory details: " free -m
                 '''
             }
         }
-        stage('build-cpu-details'){
+        stage('cpu-details'){
             steps{
                 sh'''
                 echo"cpu details: " 
@@ -24,7 +24,7 @@ pipeline{
                 '''
             }
         }
-        stage('build'){
+        stage('hostname){
             steps{
                 sh'''
                 echo"ip details: " 
@@ -32,7 +32,7 @@ pipeline{
                 '''
             }
         }
-        stage('build-cal'){
+        stage('cal'){
             steps{
                 sh'''
                 echo"cal details: " 
