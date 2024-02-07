@@ -13,6 +13,7 @@ pipeline{
         stage('memory details'){
             steps{
                 sh'''
+                echo 'memory details: '
                 free -m
                 '''
             }
@@ -20,6 +21,7 @@ pipeline{
         stage('cpu-details'){
             steps{
                 sh''' 
+              echo 'cpu configaration: '
                 lscpu
                 '''
             }
@@ -27,6 +29,7 @@ pipeline{
         stage('hostname'){
             steps{
                 sh'''
+              echo 'hostname configaration: '
                 hostname -I
                 '''
             }
@@ -34,6 +37,7 @@ pipeline{
         stage('cal'){
             steps{
                 sh'''
+               echo 'cal detailes: '
                 cal
                 '''
             }
@@ -41,6 +45,7 @@ pipeline{
        stage('date'){
             steps{
                 sh'''
+                echo 'date details: '
                  date
                 '''
          }               
