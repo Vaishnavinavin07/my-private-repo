@@ -24,7 +24,7 @@ pipeline{
                 '''
             }
         }
-        stage('build-ip'){
+        stage('build'){
             steps{
                 sh'''
                 echo"ip details: " 
