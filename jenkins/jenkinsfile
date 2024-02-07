@@ -9,7 +9,7 @@ pipeline{
             }
                
         }
-        stage('memory details){
+        stage('memory details'){
             steps{
                 sh'''
                 echo"memory details: " free -m
@@ -24,7 +24,7 @@ pipeline{
                 '''
             }
         }
-        stage('hostname){
+        stage('hostname'){
             steps{
                 sh'''
                 echo"ip details: " 
